@@ -1,4 +1,5 @@
 import Todos from './components/Todos/Todos';
+import NewTodo from './components/NewTodo/NewTodo';
 import Todo from './models/Todo';
 import './App.css';
 
@@ -8,8 +9,13 @@ function App() {
     new Todo('Learn Typescript')
   ];
 
+  const addTodoHandler = (todoText: string) => {
+
+  };
+
   return (
     <div className="App">
+      <NewTodo onAddTodo={addTodoHandler} />
       <Todos items={todos} />
     </div>
   );
